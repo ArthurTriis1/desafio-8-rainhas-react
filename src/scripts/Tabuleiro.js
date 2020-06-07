@@ -1,4 +1,4 @@
-exports.Tabuleiro = class Tabuleiro{
+class Tabuleiro{
     constructor(valor){
         if(typeof valor !== 'undefined'){
             this.base  = (typeof valor !== 'undefined') ? valor : "padrao";
@@ -75,3 +75,5 @@ exports.Tabuleiro = class Tabuleiro{
         console.table(table)
     }
 }
+
+export default Tabuleiro;

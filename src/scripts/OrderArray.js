@@ -1,4 +1,4 @@
-exports.OrderArray =  class {
+ class OrderArray{
 
     constructor() {
         this.arr = [];
@@ -17,3 +17,5 @@ exports.OrderArray =  class {
     }
 
 }
+
+export default OrderArray;

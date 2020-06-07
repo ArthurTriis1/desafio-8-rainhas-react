@@ -1,7 +1,7 @@
 
 
-let { OrderArray } = require('./OrderArray')
-let { Tabuleiro } = require('./Tabuleiro')
+import OrderArray  from './OrderArray'
+import Tabuleiro from './Tabuleiro'
 
 function resolveQueens(){
     let estados = new OrderArray()
