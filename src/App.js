@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import resolveQueens from './scripts/exec.js'
+import queen from './assets/queen.png'
 
 
 function App() {
@@ -13,14 +14,15 @@ function App() {
     function winTest(arr){
    
       if(arr.indexOf(-1) !== -1){
+        //console.log('colunas vazias')
         return false
       } 
-      console.log('Sem colunas vazias', cont)
   
       if(cont !== 8){
+        //console.log("n tem 8", cont)
         return false
       }
-      console.log('Oito rainhas marcadas')
+      //console.log('Oito rainhas marcadas')
   
       let count = 0;
       for(let x = 0; x <= arr.length - 1; x++){
@@ -33,7 +35,7 @@ function App() {
       return count === 0;
     }
     setWin(winTest(tabToArr(tab)))
-    console.warn(win)
+    //console.warn(win)
   }, [cont, tab, win])
 
   function getRandomArray(min, max, qnt) {
@@ -82,7 +84,7 @@ function App() {
     }
     newTab[column][row] = !newTab[column][row];
     setTab([...newTab])
-    console.log(tabToArr(tab))
+    //console.log(tabToArr(tab))
 
   }
 
@@ -94,7 +96,7 @@ function App() {
     <div className="App">
        <h1 className="App-title">Desafio das 8 rainhas</h1>
 
-       <h4 className="App-title">O desafio consite em posicionar 8 rainhas em um tabuleiro 8x8 sem quem elas se ataquem</h4>
+       <h4 className="App-title">O desafio consiste em posicionar 8 rainhas em um tabuleiro 8x8 sem quem elas se ataquem</h4>
        
        <div className="tabQueens">
        {
@@ -105,7 +107,7 @@ function App() {
               <div className="tabCell"
                    key={''+indexc+indexr} 
                    onClick={() => changeCell(indexc, indexr)}
-                   >{row && 'Q'}</div>
+                   >{row && <img src={queen} alt="U"/>	}</div>
               ))
             }
           </div>
@@ -114,7 +116,7 @@ function App() {
        </div>
        {
          win ?
-         <button className="btResolve winner" onClick={tabReset}>Você ganhou! Clicke pra reiniciar...</button>
+         <button className="btResolve winner" onClick={tabReset}>Você ganhou! Clique pra reiniciar...</button>
          :
          <button className="btResolve" onClick={tabResolve}>Resolver</button>
          
