@@ -17,6 +17,7 @@
 }
 
 .btResolve{
+  cursor: pointer;
   background-color: #FFF;
   min-height: 50px;
   width: 80%;
@@ -48,6 +49,7 @@
 }
 
 .tabCell{
+  cursor: pointer;
   height: 45px;
   width: 45px;
   background-color: transparent;

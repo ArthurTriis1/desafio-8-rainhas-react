@@ -118,7 +118,7 @@ function App() {
          win ?
          <button className="btResolve winner" onClick={tabReset}>Você ganhou! Clique pra reiniciar...</button>
          :
-         <button className="btResolve" onClick={tabResolve}>Resolver</button>
+         <button className="btResolve" onClick={tabResolve}>Gerar uma resolução</button>
          
 
          
